@@ -1,0 +1,1737 @@
+[
+    {
+        "name": "DateStyle",
+        "prefix": "general",
+        "full_description": "Category: Client Connection Defaults / Locale and Formatting. Context: user. Description: Sets the display format for date and time values. Also controls interpretation of ambiguous date inputs."
+    },
+    {
+        "name": "IntervalStyle",
+        "prefix": "general",
+        "full_description": "Category: Client Connection Defaults / Locale and Formatting. Context: user. Description: Sets the display format for interval values."
+    },
+    {
+        "name": "TimeZone",
+        "prefix": "general",
+        "full_description": "Category: Client Connection Defaults / Locale and Formatting. Context: user. Description: Sets the time zone for displaying and interpreting time stamps."
+    },
+    {
+        "name": "allow_in_place_tablespaces",
+        "prefix": "allow",
+        "full_description": "Category: Developer Options. Context: superuser. Description: Allows tablespaces directly inside pg_tblspc, for testing."
+    },
+    {
+        "name": "allow_system_table_mods",
+        "prefix": "allow",
+        "full_description": "Category: Developer Options. Context: superuser. Description: Allows modifications of the structure of system tables."
+    },
+    {
+        "name": "application_name",
+        "prefix": "application",
+        "full_description": "Category: Reporting and Logging / What to Log. Context: user. Description: Sets the application name to be reported in statistics and logs."
+    },
+    {
+        "name": "archive_cleanup_command",
+        "prefix": "archive",
+        "full_description": "Category: Write-Ahead Log / Archive Recovery. Context: sighup. Description: Sets the shell command that will be executed at every restart point."
+    },
+    {
+        "name": "archive_command",
+        "prefix": "archive",
+        "full_description": "Category: Write-Ahead Log / Archiving. Context: sighup. Description: Sets the shell command that will be called to archive a WAL file."
+    },
+    {
+        "name": "archive_mode",
+        "prefix": "archive",
+        "full_description": "Category: Write-Ahead Log / Archiving. Context: postmaster. Description: Allows archiving of WAL files using archive_command."
+    },
+    {
+        "name": "archive_timeout",
+        "prefix": "archive",
+        "full_description": "Category: Write-Ahead Log / Archiving. Context: sighup. Description: Forces a switch to the next WAL file if a new file has not been started within N seconds."
+    },
+    {
+        "name": "array_nulls",
+        "prefix": "array",
+        "full_description": "Category: Version and Platform Compatibility / Previous PostgreSQL Versions. Context: user. Description: Enable input of NULL elements in arrays. When turned on, unquoted NULL in an array input value means a null value; otherwise it is taken literally."
+    },
+    {
+        "name": "authentication_timeout",
+        "prefix": "authentication",
+        "full_description": "Category: Connections and Authentication / Authentication. Context: sighup. Description: Sets the maximum allowed time to complete client authentication."
+    },
+    {
+        "name": "autovacuum",
+        "prefix": "general",
+        "full_description": "Category: Autovacuum. Context: sighup. Description: Starts the autovacuum subprocess."
+    },
+    {
+        "name": "autovacuum_analyze_scale_factor",
+        "prefix": "autovacuum",
+        "full_description": "Category: Autovacuum. Context: sighup. Description: Number of tuple inserts, updates, or deletes prior to analyze as a fraction of reltuples."
+    },
+    {
+        "name": "autovacuum_analyze_threshold",
+        "prefix": "autovacuum",
+        "full_description": "Category: Autovacuum. Context: sighup. Description: Minimum number of tuple inserts, updates, or deletes prior to analyze."
+    },
+    {
+        "name": "autovacuum_freeze_max_age",
+        "prefix": "autovacuum",
+        "full_description": "Category: Autovacuum. Context: postmaster. Description: Age at which to autovacuum a table to prevent transaction ID wraparound."
+    },
+    {
+        "name": "autovacuum_max_workers",
+        "prefix": "autovacuum",
+        "full_description": "Category: Autovacuum. Context: postmaster. Description: Sets the maximum number of simultaneously running autovacuum worker processes."
+    },
+    {
+        "name": "autovacuum_multixact_freeze_max_age",
+        "prefix": "autovacuum",
+        "full_description": "Category: Autovacuum. Context: postmaster. Description: Multixact age at which to autovacuum a table to prevent multixact wraparound."
+    },
+    {
+        "name": "autovacuum_naptime",
+        "prefix": "autovacuum",
+        "full_description": "Category: Autovacuum. Context: sighup. Description: Time to sleep between autovacuum runs."
+    },
+    {
+        "name": "autovacuum_vacuum_cost_delay",
+        "prefix": "autovacuum",
+        "full_description": "Category: Autovacuum. Context: sighup. Description: Vacuum cost delay in milliseconds, for autovacuum."
+    },
+    {
+        "name": "autovacuum_vacuum_cost_limit",
+        "prefix": "autovacuum",
+        "full_description": "Category: Autovacuum. Context: sighup. Description: Vacuum cost amount available before napping, for autovacuum."
+    },
+    {
+        "name": "autovacuum_vacuum_insert_scale_factor",
+        "prefix": "autovacuum",
+        "full_description": "Category: Autovacuum. Context: sighup. Description: Number of tuple inserts prior to vacuum as a fraction of reltuples."
+    },
+    {
+        "name": "autovacuum_vacuum_insert_threshold",
+        "prefix": "autovacuum",
+        "full_description": "Category: Autovacuum. Context: sighup. Description: Minimum number of tuple inserts prior to vacuum, or -1 to disable insert vacuums."
+    },
+    {
+        "name": "autovacuum_vacuum_scale_factor",
+        "prefix": "autovacuum",
+        "full_description": "Category: Autovacuum. Context: sighup. Description: Number of tuple updates or deletes prior to vacuum as a fraction of reltuples."
+    },
+    {
+        "name": "autovacuum_vacuum_threshold",
+        "prefix": "autovacuum",
+        "full_description": "Category: Autovacuum. Context: sighup. Description: Minimum number of tuple updates or deletes prior to vacuum."
+    },
+    {
+        "name": "autovacuum_work_mem",
+        "prefix": "autovacuum",
+        "full_description": "Category: Resource Usage / Memory. Context: sighup. Description: Sets the maximum memory to be used by each autovacuum worker process."
+    },
+    {
+        "name": "backend_flush_after",
+        "prefix": "backend",
+        "full_description": "Category: Resource Usage / Asynchronous Behavior. Context: user. Description: Number of pages after which previously performed writes are flushed to disk."
+    },
+    {
+        "name": "backslash_quote",
+        "prefix": "backslash",
+        "full_description": "Category: Version and Platform Compatibility / Previous PostgreSQL Versions. Context: user. Description: Sets whether \"\\'\" is allowed in string literals."
+    },
+    {
+        "name": "backtrace_functions",
+        "prefix": "backtrace",
+        "full_description": "Category: Developer Options. Context: superuser. Description: Log backtrace for errors in these functions."
+    },
+    {
+        "name": "bgwriter_delay",
+        "prefix": "bgwriter",
+        "full_description": "Category: Resource Usage / Background Writer. Context: sighup. Description: Background writer sleep time between rounds."
+    },
+    {
+        "name": "bgwriter_flush_after",
+        "prefix": "bgwriter",
+        "full_description": "Category: Resource Usage / Background Writer. Context: sighup. Description: Number of pages after which previously performed writes are flushed to disk."
+    },
+    {
+        "name": "bgwriter_lru_maxpages",
+        "prefix": "bgwriter",
+        "full_description": "Category: Resource Usage / Background Writer. Context: sighup. Description: Background writer maximum number of LRU pages to flush per round."
+    },
+    {
+        "name": "bgwriter_lru_multiplier",
+        "prefix": "bgwriter",
+        "full_description": "Category: Resource Usage / Background Writer. Context: sighup. Description: Multiple of the average buffer usage to free per round."
+    },
+    {
+        "name": "block_size",
+        "prefix": "block",
+        "full_description": "Category: Preset Options. Context: internal. Description: Shows the size of a disk block."
+    },
+    {
+        "name": "bonjour",
+        "prefix": "general",
+        "full_description": "Category: Connections and Authentication / Connection Settings. Context: postmaster. Description: Enables advertising the server via Bonjour."
+    },
+    {
+        "name": "bonjour_name",
+        "prefix": "bonjour",
+        "full_description": "Category: Connections and Authentication / Connection Settings. Context: postmaster. Description: Sets the Bonjour service name."
+    },
+    {
+        "name": "bytea_output",
+        "prefix": "bytea",
+        "full_description": "Category: Client Connection Defaults / Statement Behavior. Context: user. Description: Sets the output format for bytea."
+    },
+    {
+        "name": "check_function_bodies",
+        "prefix": "check",
+        "full_description": "Category: Client Connection Defaults / Statement Behavior. Context: user. Description: Check routine bodies during CREATE FUNCTION and CREATE PROCEDURE."
+    },
+    {
+        "name": "checkpoint_completion_target",
+        "prefix": "checkpoint",
+        "full_description": "Category: Write-Ahead Log / Checkpoints. Context: sighup. Description: Time spent flushing dirty buffers during checkpoint, as fraction of checkpoint interval."
+    },
+    {
+        "name": "checkpoint_flush_after",
+        "prefix": "checkpoint",
+        "full_description": "Category: Write-Ahead Log / Checkpoints. Context: sighup. Description: Number of pages after which previously performed writes are flushed to disk."
+    },
+    {
+        "name": "checkpoint_timeout",
+        "prefix": "checkpoint",
+        "full_description": "Category: Write-Ahead Log / Checkpoints. Context: sighup. Description: Sets the maximum time between automatic WAL checkpoints."
+    },
+    {
+        "name": "checkpoint_warning",
+        "prefix": "checkpoint",
+        "full_description": "Category: Write-Ahead Log / Checkpoints. Context: sighup. Description: Enables warnings if checkpoint segments are filled more frequently than this. Write a message to the server log if checkpoints caused by the filling of checkpoint segment files happens more frequently than this number of seconds. Zero turns off the warning."
+    },
+    {
+        "name": "client_connection_check_interval",
+        "prefix": "client",
+        "full_description": "Category: Connections and Authentication / Connection Settings. Context: user. Description: Sets the time interval between checks for disconnection while running queries."
+    },
+    {
+        "name": "client_encoding",
+        "prefix": "client",
+        "full_description": "Category: Client Connection Defaults / Locale and Formatting. Context: user. Description: Sets the client's character set encoding."
+    },
+    {
+        "name": "client_min_messages",
+        "prefix": "client",
+        "full_description": "Category: Client Connection Defaults / Statement Behavior. Context: user. Description: Sets the message levels that are sent to the client. Each level includes all the levels that follow it. The later the level, the fewer messages are sent."
+    },
+    {
+        "name": "cluster_name",
+        "prefix": "cluster",
+        "full_description": "Category: Reporting and Logging / Process Title. Context: postmaster. Description: Sets the name of the cluster, which is included in the process title."
+    },
+    {
+        "name": "commit_delay",
+        "prefix": "commit",
+        "full_description": "Category: Write-Ahead Log / Settings. Context: superuser. Description: Sets the delay in microseconds between transaction commit and flushing WAL to disk."
+    },
+    {
+        "name": "commit_siblings",
+        "prefix": "commit",
+        "full_description": "Category: Write-Ahead Log / Settings. Context: user. Description: Sets the minimum concurrent open transactions before performing commit_delay."
+    },
+    {
+        "name": "compute_query_id",
+        "prefix": "compute",
+        "full_description": "Category: Statistics / Monitoring. Context: superuser. Description: Compute query identifiers."
+    },
+    {
+        "name": "config_file",
+        "prefix": "config",
+        "full_description": "Category: File Locations. Context: postmaster. Description: Sets the server's main configuration file."
+    },
+    {
+        "name": "constraint_exclusion",
+        "prefix": "constraint",
+        "full_description": "Category: Query Tuning / Other Planner Options. Context: user. Description: Enables the planner to use constraints to optimize queries. Table scans will be skipped if their constraints guarantee that no rows match the query."
+    },
+    {
+        "name": "cpu_index_tuple_cost",
+        "prefix": "cpu",
+        "full_description": "Category: Query Tuning / Planner Cost Constants. Context: user. Description: Sets the planner's estimate of the cost of processing each index entry during an index scan."
+    },
+    {
+        "name": "cpu_operator_cost",
+        "prefix": "cpu",
+        "full_description": "Category: Query Tuning / Planner Cost Constants. Context: user. Description: Sets the planner's estimate of the cost of processing each operator or function call."
+    },
+    {
+        "name": "cpu_tuple_cost",
+        "prefix": "cpu",
+        "full_description": "Category: Query Tuning / Planner Cost Constants. Context: user. Description: Sets the planner's estimate of the cost of processing each tuple (row)."
+    },
+    {
+        "name": "cursor_tuple_fraction",
+        "prefix": "cursor",
+        "full_description": "Category: Query Tuning / Other Planner Options. Context: user. Description: Sets the planner's estimate of the fraction of a cursor's rows that will be retrieved."
+    },
+    {
+        "name": "data_checksums",
+        "prefix": "data",
+        "full_description": "Category: Preset Options. Context: internal. Description: Shows whether data checksums are turned on for this cluster."
+    },
+    {
+        "name": "data_directory",
+        "prefix": "data",
+        "full_description": "Category: File Locations. Context: postmaster. Description: Sets the server's data directory."
+    },
+    {
+        "name": "data_directory_mode",
+        "prefix": "data",
+        "full_description": "Category: Preset Options. Context: internal. Description: Shows the mode of the data directory. The parameter value is a numeric mode specification in the form accepted by the chmod and umask system calls. (To use the customary octal format the number must start with a 0 (zero).)"
+    },
+    {
+        "name": "data_sync_retry",
+        "prefix": "data",
+        "full_description": "Category: Error Handling. Context: postmaster. Description: Whether to continue running after a failure to sync data files."
+    },
+    {
+        "name": "db_user_namespace",
+        "prefix": "db",
+        "full_description": "Category: Connections and Authentication / Authentication. Context: sighup. Description: Enables per-database user names."
+    },
+    {
+        "name": "deadlock_timeout",
+        "prefix": "deadlock",
+        "full_description": "Category: Lock Management. Context: superuser. Description: Sets the time to wait on a lock before checking for deadlock."
+    },
+    {
+        "name": "debug_assertions",
+        "prefix": "debug",
+        "full_description": "Category: Preset Options. Context: internal. Description: Shows whether the running server has assertion checks enabled."
+    },
+    {
+        "name": "debug_discard_caches",
+        "prefix": "debug",
+        "full_description": "Category: Developer Options. Context: superuser. Description: Aggressively flush system caches for debugging purposes."
+    },
+    {
+        "name": "debug_pretty_print",
+        "prefix": "debug",
+        "full_description": "Category: Reporting and Logging / What to Log. Context: user. Description: Indents parse and plan tree displays."
+    },
+    {
+        "name": "debug_print_parse",
+        "prefix": "debug",
+        "full_description": "Category: Reporting and Logging / What to Log. Context: user. Description: Logs each query's parse tree."
+    },
+    {
+        "name": "debug_print_plan",
+        "prefix": "debug",
+        "full_description": "Category: Reporting and Logging / What to Log. Context: user. Description: Logs each query's execution plan."
+    },
+    {
+        "name": "debug_print_rewritten",
+        "prefix": "debug",
+        "full_description": "Category: Reporting and Logging / What to Log. Context: user. Description: Logs each query's rewritten parse tree."
+    },
+    {
+        "name": "default_statistics_target",
+        "prefix": "default",
+        "full_description": "Category: Query Tuning / Other Planner Options. Context: user. Description: Sets the default statistics target. This applies to table columns that have not had a column-specific target set via ALTER TABLE SET STATISTICS."
+    },
+    {
+        "name": "default_table_access_method",
+        "prefix": "default",
+        "full_description": "Category: Client Connection Defaults / Statement Behavior. Context: user. Description: Sets the default table access method for new tables."
+    },
+    {
+        "name": "default_tablespace",
+        "prefix": "default",
+        "full_description": "Category: Client Connection Defaults / Statement Behavior. Context: user. Description: Sets the default tablespace to create tables and indexes in. An empty string selects the database's default tablespace."
+    },
+    {
+        "name": "default_text_search_config",
+        "prefix": "default",
+        "full_description": "Category: Client Connection Defaults / Locale and Formatting. Context: user. Description: Sets default text search configuration."
+    },
+    {
+        "name": "default_toast_compression",
+        "prefix": "default",
+        "full_description": "Category: Client Connection Defaults / Statement Behavior. Context: user. Description: Sets the default compression method for compressible values."
+    },
+    {
+        "name": "default_transaction_deferrable",
+        "prefix": "default",
+        "full_description": "Category: Client Connection Defaults / Statement Behavior. Context: user. Description: Sets the default deferrable status of new transactions."
+    },
+    {
+        "name": "default_transaction_isolation",
+        "prefix": "default",
+        "full_description": "Category: Client Connection Defaults / Statement Behavior. Context: user. Description: Sets the transaction isolation level of each new transaction."
+    },
+    {
+        "name": "default_transaction_read_only",
+        "prefix": "default",
+        "full_description": "Category: Client Connection Defaults / Statement Behavior. Context: user. Description: Sets the default read-only status of new transactions."
+    },
+    {
+        "name": "dynamic_library_path",
+        "prefix": "dynamic",
+        "full_description": "Category: Client Connection Defaults / Other Defaults. Context: superuser. Description: Sets the path for dynamically loadable modules. If a dynamically loadable module needs to be opened and the specified name does not have a directory component (i.e., the name does not contain a slash), the system will search this path for the specified file."
+    },
+    {
+        "name": "dynamic_shared_memory_type",
+        "prefix": "dynamic",
+        "full_description": "Category: Resource Usage / Memory. Context: postmaster. Description: Selects the dynamic shared memory implementation used."
+    },
+    {
+        "name": "effective_cache_size",
+        "prefix": "effective",
+        "full_description": "Category: Query Tuning / Planner Cost Constants. Context: user. Description: Sets the planner's assumption about the total size of the data caches. That is, the total size of the caches (kernel cache and shared buffers) used for PostgreSQL data files. This is measured in disk pages, which are normally 8 kB each."
+    },
+    {
+        "name": "effective_io_concurrency",
+        "prefix": "effective",
+        "full_description": "Category: Resource Usage / Asynchronous Behavior. Context: user. Description: Number of simultaneous requests that can be handled efficiently by the disk subsystem."
+    },
+    {
+        "name": "enable_async_append",
+        "prefix": "enable",
+        "full_description": "Category: Query Tuning / Planner Method Configuration. Context: user. Description: Enables the planner's use of async append plans."
+    },
+    {
+        "name": "enable_bitmapscan",
+        "prefix": "enable",
+        "full_description": "Category: Query Tuning / Planner Method Configuration. Context: user. Description: Enables the planner's use of bitmap-scan plans."
+    },
+    {
+        "name": "enable_gathermerge",
+        "prefix": "enable",
+        "full_description": "Category: Query Tuning / Planner Method Configuration. Context: user. Description: Enables the planner's use of gather merge plans."
+    },
+    {
+        "name": "enable_hashagg",
+        "prefix": "enable",
+        "full_description": "Category: Query Tuning / Planner Method Configuration. Context: user. Description: Enables the planner's use of hashed aggregation plans."
+    },
+    {
+        "name": "enable_hashjoin",
+        "prefix": "enable",
+        "full_description": "Category: Query Tuning / Planner Method Configuration. Context: user. Description: Enables the planner's use of hash join plans."
+    },
+    {
+        "name": "enable_incremental_sort",
+        "prefix": "enable",
+        "full_description": "Category: Query Tuning / Planner Method Configuration. Context: user. Description: Enables the planner's use of incremental sort steps."
+    },
+    {
+        "name": "enable_indexonlyscan",
+        "prefix": "enable",
+        "full_description": "Category: Query Tuning / Planner Method Configuration. Context: user. Description: Enables the planner's use of index-only-scan plans."
+    },
+    {
+        "name": "enable_indexscan",
+        "prefix": "enable",
+        "full_description": "Category: Query Tuning / Planner Method Configuration. Context: user. Description: Enables the planner's use of index-scan plans."
+    },
+    {
+        "name": "enable_material",
+        "prefix": "enable",
+        "full_description": "Category: Query Tuning / Planner Method Configuration. Context: user. Description: Enables the planner's use of materialization."
+    },
+    {
+        "name": "enable_memoize",
+        "prefix": "enable",
+        "full_description": "Category: Query Tuning / Planner Method Configuration. Context: user. Description: Enables the planner's use of memoization."
+    },
+    {
+        "name": "enable_mergejoin",
+        "prefix": "enable",
+        "full_description": "Category: Query Tuning / Planner Method Configuration. Context: user. Description: Enables the planner's use of merge join plans."
+    },
+    {
+        "name": "enable_nestloop",
+        "prefix": "enable",
+        "full_description": "Category: Query Tuning / Planner Method Configuration. Context: user. Description: Enables the planner's use of nested-loop join plans."
+    },
+    {
+        "name": "enable_parallel_append",
+        "prefix": "enable",
+        "full_description": "Category: Query Tuning / Planner Method Configuration. Context: user. Description: Enables the planner's use of parallel append plans."
+    },
+    {
+        "name": "enable_parallel_hash",
+        "prefix": "enable",
+        "full_description": "Category: Query Tuning / Planner Method Configuration. Context: user. Description: Enables the planner's use of parallel hash plans."
+    },
+    {
+        "name": "enable_partition_pruning",
+        "prefix": "enable",
+        "full_description": "Category: Query Tuning / Planner Method Configuration. Context: user. Description: Enables plan-time and execution-time partition pruning. Allows the query planner and executor to compare partition bounds to conditions in the query to determine which partitions must be scanned."
+    },
+    {
+        "name": "enable_partitionwise_aggregate",
+        "prefix": "enable",
+        "full_description": "Category: Query Tuning / Planner Method Configuration. Context: user. Description: Enables partitionwise aggregation and grouping."
+    },
+    {
+        "name": "enable_partitionwise_join",
+        "prefix": "enable",
+        "full_description": "Category: Query Tuning / Planner Method Configuration. Context: user. Description: Enables partitionwise join."
+    },
+    {
+        "name": "enable_seqscan",
+        "prefix": "enable",
+        "full_description": "Category: Query Tuning / Planner Method Configuration. Context: user. Description: Enables the planner's use of sequential-scan plans."
+    },
+    {
+        "name": "enable_sort",
+        "prefix": "enable",
+        "full_description": "Category: Query Tuning / Planner Method Configuration. Context: user. Description: Enables the planner's use of explicit sort steps."
+    },
+    {
+        "name": "enable_tidscan",
+        "prefix": "enable",
+        "full_description": "Category: Query Tuning / Planner Method Configuration. Context: user. Description: Enables the planner's use of TID scan plans."
+    },
+    {
+        "name": "escape_string_warning",
+        "prefix": "escape",
+        "full_description": "Category: Version and Platform Compatibility / Previous PostgreSQL Versions. Context: user. Description: Warn about backslash escapes in ordinary string literals."
+    },
+    {
+        "name": "event_source",
+        "prefix": "event",
+        "full_description": "Category: Reporting and Logging / Where to Log. Context: postmaster. Description: Sets the application name used to identify PostgreSQL messages in the event log."
+    },
+    {
+        "name": "exit_on_error",
+        "prefix": "exit",
+        "full_description": "Category: Error Handling. Context: user. Description: Terminate session on any error."
+    },
+    {
+        "name": "extension_destdir",
+        "prefix": "extension",
+        "full_description": "Category: File Locations. Context: superuser. Description: Path to prepend for extension loading This directory is prepended to paths when loading extensions (control and SQL files), and to the '$libdir' directive when loading modules that back functions. The location is made configurable to allow build-time testing of extensions that do not have been installed to their proper location yet."
+    },
+    {
+        "name": "external_pid_file",
+        "prefix": "external",
+        "full_description": "Category: File Locations. Context: postmaster. Description: Writes the postmaster PID to the specified file."
+    },
+    {
+        "name": "extra_float_digits",
+        "prefix": "extra",
+        "full_description": "Category: Client Connection Defaults / Locale and Formatting. Context: user. Description: Sets the number of digits displayed for floating-point values. This affects real, double precision, and geometric data types. A zero or negative parameter value is added to the standard number of digits (FLT_DIG or DBL_DIG as appropriate). Any value greater than zero selects precise output mode."
+    },
+    {
+        "name": "force_parallel_mode",
+        "prefix": "force",
+        "full_description": "Category: Developer Options. Context: user. Description: Forces use of parallel query facilities. If possible, run query using a parallel worker and with parallel restrictions."
+    },
+    {
+        "name": "from_collapse_limit",
+        "prefix": "from",
+        "full_description": "Category: Query Tuning / Other Planner Options. Context: user. Description: Sets the FROM-list size beyond which subqueries are not collapsed. The planner will merge subqueries into upper queries if the resulting FROM list would have no more than this many items."
+    },
+    {
+        "name": "fsync",
+        "prefix": "general",
+        "full_description": "Category: Write-Ahead Log / Settings. Context: sighup. Description: Forces synchronization of updates to disk. The server will use the fsync() system call in several places to make sure that updates are physically written to disk. This ensures that a database cluster will recover to a consistent state after an operating system or hardware crash."
+    },
+    {
+        "name": "full_page_writes",
+        "prefix": "full",
+        "full_description": "Category: Write-Ahead Log / Settings. Context: sighup. Description: Writes full pages to WAL when first modified after a checkpoint. A page write in process during an operating system crash might be only partially written to disk. During recovery, the row changes stored in WAL are not enough to recover. This option writes pages when first modified after a checkpoint to WAL so full recovery is possible."
+    },
+    {
+        "name": "geqo",
+        "prefix": "general",
+        "full_description": "Category: Query Tuning / Genetic Query Optimizer. Context: user. Description: Enables genetic query optimization. This algorithm attempts to do planning without exhaustive searching."
+    },
+    {
+        "name": "geqo_effort",
+        "prefix": "geqo",
+        "full_description": "Category: Query Tuning / Genetic Query Optimizer. Context: user. Description: GEQO: effort is used to set the default for other GEQO parameters."
+    },
+    {
+        "name": "geqo_generations",
+        "prefix": "geqo",
+        "full_description": "Category: Query Tuning / Genetic Query Optimizer. Context: user. Description: GEQO: number of iterations of the algorithm. Zero selects a suitable default value."
+    },
+    {
+        "name": "geqo_pool_size",
+        "prefix": "geqo",
+        "full_description": "Category: Query Tuning / Genetic Query Optimizer. Context: user. Description: GEQO: number of individuals in the population. Zero selects a suitable default value."
+    },
+    {
+        "name": "geqo_seed",
+        "prefix": "geqo",
+        "full_description": "Category: Query Tuning / Genetic Query Optimizer. Context: user. Description: GEQO: seed for random path selection."
+    },
+    {
+        "name": "geqo_selection_bias",
+        "prefix": "geqo",
+        "full_description": "Category: Query Tuning / Genetic Query Optimizer. Context: user. Description: GEQO: selective pressure within the population."
+    },
+    {
+        "name": "geqo_threshold",
+        "prefix": "geqo",
+        "full_description": "Category: Query Tuning / Genetic Query Optimizer. Context: user. Description: Sets the threshold of FROM items beyond which GEQO is used."
+    },
+    {
+        "name": "gin_fuzzy_search_limit",
+        "prefix": "gin",
+        "full_description": "Category: Client Connection Defaults / Other Defaults. Context: user. Description: Sets the maximum allowed result for exact search by GIN."
+    },
+    {
+        "name": "gin_pending_list_limit",
+        "prefix": "gin",
+        "full_description": "Category: Client Connection Defaults / Statement Behavior. Context: user. Description: Sets the maximum size of the pending list for GIN index."
+    },
+    {
+        "name": "hash_mem_multiplier",
+        "prefix": "hash",
+        "full_description": "Category: Resource Usage / Memory. Context: user. Description: Multiple of work_mem to use for hash tables."
+    },
+    {
+        "name": "hba_file",
+        "prefix": "hba",
+        "full_description": "Category: File Locations. Context: postmaster. Description: Sets the server's \"hba\" configuration file."
+    },
+    {
+        "name": "hot_standby",
+        "prefix": "hot",
+        "full_description": "Category: Replication / Standby Servers. Context: postmaster. Description: Allows connections and queries during recovery."
+    },
+    {
+        "name": "hot_standby_feedback",
+        "prefix": "hot",
+        "full_description": "Category: Replication / Standby Servers. Context: sighup. Description: Allows feedback from a hot standby to the primary that will avoid query conflicts."
+    },
+    {
+        "name": "huge_page_size",
+        "prefix": "huge",
+        "full_description": "Category: Resource Usage / Memory. Context: postmaster. Description: The size of huge page that should be requested."
+    },
+    {
+        "name": "huge_pages",
+        "prefix": "huge",
+        "full_description": "Category: Resource Usage / Memory. Context: postmaster. Description: Use of huge pages on Linux or Windows."
+    },
+    {
+        "name": "ident_file",
+        "prefix": "ident",
+        "full_description": "Category: File Locations. Context: postmaster. Description: Sets the server's \"ident\" configuration file."
+    },
+    {
+        "name": "idle_in_transaction_session_timeout",
+        "prefix": "idle",
+        "full_description": "Category: Client Connection Defaults / Statement Behavior. Context: user. Description: Sets the maximum allowed idle time between queries, when in a transaction. A value of 0 turns off the timeout."
+    },
+    {
+        "name": "idle_session_timeout",
+        "prefix": "idle",
+        "full_description": "Category: Client Connection Defaults / Statement Behavior. Context: user. Description: Sets the maximum allowed idle time between queries, when not in a transaction. A value of 0 turns off the timeout."
+    },
+    {
+        "name": "ignore_checksum_failure",
+        "prefix": "ignore",
+        "full_description": "Category: Developer Options. Context: superuser. Description: Continues processing after a checksum failure. Detection of a checksum failure normally causes PostgreSQL to report an error, aborting the current transaction. Setting ignore_checksum_failure to true causes the system to ignore the failure (but still report a warning), and continue processing. This behavior could cause crashes or other serious problems. Only has an effect if checksums are enabled."
+    },
+    {
+        "name": "ignore_invalid_pages",
+        "prefix": "ignore",
+        "full_description": "Category: Developer Options. Context: postmaster. Description: Continues recovery after an invalid pages failure. Detection of WAL records having references to invalid pages during recovery causes PostgreSQL to raise a PANIC-level error, aborting the recovery. Setting ignore_invalid_pages to true causes the system to ignore invalid page references in WAL records (but still report a warning), and continue recovery. This behavior may cause crashes, data loss, propagate or hide corruption, or other serious problems. Only has an effect during recovery or in standby mode."
+    },
+    {
+        "name": "ignore_system_indexes",
+        "prefix": "ignore",
+        "full_description": "Category: Developer Options. Context: backend. Description: Disables reading from system indexes. It does not prevent updating the indexes, so it is safe to use. The worst consequence is slowness."
+    },
+    {
+        "name": "in_hot_standby",
+        "prefix": "in",
+        "full_description": "Category: Preset Options. Context: internal. Description: Shows whether hot standby is currently active."
+    },
+    {
+        "name": "integer_datetimes",
+        "prefix": "integer",
+        "full_description": "Category: Preset Options. Context: internal. Description: Shows whether datetimes are integer based."
+    },
+    {
+        "name": "jit",
+        "prefix": "general",
+        "full_description": "Category: Query Tuning / Other Planner Options. Context: user. Description: Allow JIT compilation."
+    },
+    {
+        "name": "jit_above_cost",
+        "prefix": "jit",
+        "full_description": "Category: Query Tuning / Planner Cost Constants. Context: user. Description: Perform JIT compilation if query is more expensive. -1 disables JIT compilation."
+    },
+    {
+        "name": "jit_debugging_support",
+        "prefix": "jit",
+        "full_description": "Category: Developer Options. Context: superuser-backend. Description: Register JIT-compiled functions with debugger."
+    },
+    {
+        "name": "jit_dump_bitcode",
+        "prefix": "jit",
+        "full_description": "Category: Developer Options. Context: superuser. Description: Write out LLVM bitcode to facilitate JIT debugging."
+    },
+    {
+        "name": "jit_expressions",
+        "prefix": "jit",
+        "full_description": "Category: Developer Options. Context: user. Description: Allow JIT compilation of expressions."
+    },
+    {
+        "name": "jit_inline_above_cost",
+        "prefix": "jit",
+        "full_description": "Category: Query Tuning / Planner Cost Constants. Context: user. Description: Perform JIT inlining if query is more expensive. -1 disables inlining."
+    },
+    {
+        "name": "jit_optimize_above_cost",
+        "prefix": "jit",
+        "full_description": "Category: Query Tuning / Planner Cost Constants. Context: user. Description: Optimize JIT-compiled functions if query is more expensive. -1 disables optimization."
+    },
+    {
+        "name": "jit_profiling_support",
+        "prefix": "jit",
+        "full_description": "Category: Developer Options. Context: superuser-backend. Description: Register JIT-compiled functions with perf profiler."
+    },
+    {
+        "name": "jit_provider",
+        "prefix": "jit",
+        "full_description": "Category: Client Connection Defaults / Shared Library Preloading. Context: postmaster. Description: JIT provider to use."
+    },
+    {
+        "name": "jit_tuple_deforming",
+        "prefix": "jit",
+        "full_description": "Category: Developer Options. Context: user. Description: Allow JIT compilation of tuple deforming."
+    },
+    {
+        "name": "join_collapse_limit",
+        "prefix": "join",
+        "full_description": "Category: Query Tuning / Other Planner Options. Context: user. Description: Sets the FROM-list size beyond which JOIN constructs are not flattened. The planner will flatten explicit JOIN constructs into lists of FROM items whenever a list of no more than this many items would result."
+    },
+    {
+        "name": "krb_caseins_users",
+        "prefix": "krb",
+        "full_description": "Category: Connections and Authentication / Authentication. Context: sighup. Description: Sets whether Kerberos and GSSAPI user names should be treated as case-insensitive."
+    },
+    {
+        "name": "krb_server_keyfile",
+        "prefix": "krb",
+        "full_description": "Category: Connections and Authentication / Authentication. Context: sighup. Description: Sets the location of the Kerberos server key file."
+    },
+    {
+        "name": "lc_collate",
+        "prefix": "lc",
+        "full_description": "Category: Preset Options. Context: internal. Description: Shows the collation order locale."
+    },
+    {
+        "name": "lc_ctype",
+        "prefix": "lc",
+        "full_description": "Category: Preset Options. Context: internal. Description: Shows the character classification and case conversion locale."
+    },
+    {
+        "name": "lc_messages",
+        "prefix": "lc",
+        "full_description": "Category: Client Connection Defaults / Locale and Formatting. Context: superuser. Description: Sets the language in which messages are displayed."
+    },
+    {
+        "name": "lc_monetary",
+        "prefix": "lc",
+        "full_description": "Category: Client Connection Defaults / Locale and Formatting. Context: user. Description: Sets the locale for formatting monetary amounts."
+    },
+    {
+        "name": "lc_numeric",
+        "prefix": "lc",
+        "full_description": "Category: Client Connection Defaults / Locale and Formatting. Context: user. Description: Sets the locale for formatting numbers."
+    },
+    {
+        "name": "lc_time",
+        "prefix": "lc",
+        "full_description": "Category: Client Connection Defaults / Locale and Formatting. Context: user. Description: Sets the locale for formatting date and time values."
+    },
+    {
+        "name": "listen_addresses",
+        "prefix": "listen",
+        "full_description": "Category: Connections and Authentication / Connection Settings. Context: postmaster. Description: Sets the host name or IP address(es) to listen to."
+    },
+    {
+        "name": "lo_compat_privileges",
+        "prefix": "lo",
+        "full_description": "Category: Version and Platform Compatibility / Previous PostgreSQL Versions. Context: superuser. Description: Enables backward compatibility mode for privilege checks on large objects. Skips privilege checks when reading or modifying large objects, for compatibility with PostgreSQL releases prior to 9.0."
+    },
+    {
+        "name": "local_preload_libraries",
+        "prefix": "local",
+        "full_description": "Category: Client Connection Defaults / Shared Library Preloading. Context: user. Description: Lists unprivileged shared libraries to preload into each backend."
+    },
+    {
+        "name": "lock_timeout",
+        "prefix": "lock",
+        "full_description": "Category: Client Connection Defaults / Statement Behavior. Context: user. Description: Sets the maximum allowed duration of any wait for a lock. A value of 0 turns off the timeout."
+    },
+    {
+        "name": "log_autovacuum_min_duration",
+        "prefix": "log",
+        "full_description": "Category: Reporting and Logging / What to Log. Context: sighup. Description: Sets the minimum execution time above which autovacuum actions will be logged. Zero prints all actions. -1 turns autovacuum logging off."
+    },
+    {
+        "name": "log_checkpoints",
+        "prefix": "log",
+        "full_description": "Category: Reporting and Logging / What to Log. Context: sighup. Description: Logs each checkpoint."
+    },
+    {
+        "name": "log_connections",
+        "prefix": "log",
+        "full_description": "Category: Reporting and Logging / What to Log. Context: superuser-backend. Description: Logs each successful connection."
+    },
+    {
+        "name": "log_destination",
+        "prefix": "log",
+        "full_description": "Category: Reporting and Logging / Where to Log. Context: sighup. Description: Sets the destination for server log output. Valid values are combinations of \"stderr\", \"syslog\", \"csvlog\", and \"eventlog\", depending on the platform."
+    },
+    {
+        "name": "log_directory",
+        "prefix": "log",
+        "full_description": "Category: Reporting and Logging / Where to Log. Context: sighup. Description: Sets the destination directory for log files. Can be specified as relative to the data directory or as absolute path."
+    },
+    {
+        "name": "log_disconnections",
+        "prefix": "log",
+        "full_description": "Category: Reporting and Logging / What to Log. Context: superuser-backend. Description: Logs end of a session, including duration."
+    },
+    {
+        "name": "log_duration",
+        "prefix": "log",
+        "full_description": "Category: Reporting and Logging / What to Log. Context: superuser. Description: Logs the duration of each completed SQL statement."
+    },
+    {
+        "name": "log_error_verbosity",
+        "prefix": "log",
+        "full_description": "Category: Reporting and Logging / What to Log. Context: superuser. Description: Sets the verbosity of logged messages."
+    },
+    {
+        "name": "log_executor_stats",
+        "prefix": "log",
+        "full_description": "Category: Statistics / Monitoring. Context: superuser. Description: Writes executor performance statistics to the server log."
+    },
+    {
+        "name": "log_file_mode",
+        "prefix": "log",
+        "full_description": "Category: Reporting and Logging / Where to Log. Context: sighup. Description: Sets the file permissions for log files. The parameter value is expected to be a numeric mode specification in the form accepted by the chmod and umask system calls. (To use the customary octal format the number must start with a 0 (zero).)"
+    },
+    {
+        "name": "log_filename",
+        "prefix": "log",
+        "full_description": "Category: Reporting and Logging / Where to Log. Context: sighup. Description: Sets the file name pattern for log files."
+    },
+    {
+        "name": "log_hostname",
+        "prefix": "log",
+        "full_description": "Category: Reporting and Logging / What to Log. Context: sighup. Description: Logs the host name in the connection logs. By default, connection logs only show the IP address of the connecting host. If you want them to show the host name you can turn this on, but depending on your host name resolution setup it might impose a non-negligible performance penalty."
+    },
+    {
+        "name": "log_line_prefix",
+        "prefix": "log",
+        "full_description": "Category: Reporting and Logging / What to Log. Context: sighup. Description: Controls information prefixed to each log line. If blank, no prefix is used."
+    },
+    {
+        "name": "log_lock_waits",
+        "prefix": "log",
+        "full_description": "Category: Reporting and Logging / What to Log. Context: superuser. Description: Logs long lock waits."
+    },
+    {
+        "name": "log_min_duration_sample",
+        "prefix": "log",
+        "full_description": "Category: Reporting and Logging / When to Log. Context: superuser. Description: Sets the minimum execution time above which a sample of statements will be logged. Sampling is determined by log_statement_sample_rate. Zero logs a sample of all queries. -1 turns this feature off."
+    },
+    {
+        "name": "log_min_duration_statement",
+        "prefix": "log",
+        "full_description": "Category: Reporting and Logging / When to Log. Context: superuser. Description: Sets the minimum execution time above which all statements will be logged. Zero prints all queries. -1 turns this feature off."
+    },
+    {
+        "name": "log_min_error_statement",
+        "prefix": "log",
+        "full_description": "Category: Reporting and Logging / When to Log. Context: superuser. Description: Causes all statements generating error at or above this level to be logged. Each level includes all the levels that follow it. The later the level, the fewer messages are sent."
+    },
+    {
+        "name": "log_min_messages",
+        "prefix": "log",
+        "full_description": "Category: Reporting and Logging / When to Log. Context: superuser. Description: Sets the message levels that are logged. Each level includes all the levels that follow it. The later the level, the fewer messages are sent."
+    },
+    {
+        "name": "log_parameter_max_length",
+        "prefix": "log",
+        "full_description": "Category: Reporting and Logging / What to Log. Context: superuser. Description: When logging statements, limit logged parameter values to first N bytes. -1 to print values in full."
+    },
+    {
+        "name": "log_parameter_max_length_on_error",
+        "prefix": "log",
+        "full_description": "Category: Reporting and Logging / What to Log. Context: user. Description: When reporting an error, limit logged parameter values to first N bytes. -1 to print values in full."
+    },
+    {
+        "name": "log_parser_stats",
+        "prefix": "log",
+        "full_description": "Category: Statistics / Monitoring. Context: superuser. Description: Writes parser performance statistics to the server log."
+    },
+    {
+        "name": "log_planner_stats",
+        "prefix": "log",
+        "full_description": "Category: Statistics / Monitoring. Context: superuser. Description: Writes planner performance statistics to the server log."
+    },
+    {
+        "name": "log_recovery_conflict_waits",
+        "prefix": "log",
+        "full_description": "Category: Reporting and Logging / What to Log. Context: sighup. Description: Logs standby recovery conflict waits."
+    },
+    {
+        "name": "log_replication_commands",
+        "prefix": "log",
+        "full_description": "Category: Reporting and Logging / What to Log. Context: superuser. Description: Logs each replication command."
+    },
+    {
+        "name": "log_rotation_age",
+        "prefix": "log",
+        "full_description": "Category: Reporting and Logging / Where to Log. Context: sighup. Description: Automatic log file rotation will occur after N minutes."
+    },
+    {
+        "name": "log_rotation_size",
+        "prefix": "log",
+        "full_description": "Category: Reporting and Logging / Where to Log. Context: sighup. Description: Automatic log file rotation will occur after N kilobytes."
+    },
+    {
+        "name": "log_statement",
+        "prefix": "log",
+        "full_description": "Category: Reporting and Logging / What to Log. Context: superuser. Description: Sets the type of statements logged."
+    },
+    {
+        "name": "log_statement_sample_rate",
+        "prefix": "log",
+        "full_description": "Category: Reporting and Logging / When to Log. Context: superuser. Description: Fraction of statements exceeding log_min_duration_sample to be logged. Use a value between 0.0 (never log) and 1.0 (always log)."
+    },
+    {
+        "name": "log_statement_stats",
+        "prefix": "log",
+        "full_description": "Category: Statistics / Monitoring. Context: superuser. Description: Writes cumulative performance statistics to the server log."
+    },
+    {
+        "name": "log_temp_files",
+        "prefix": "log",
+        "full_description": "Category: Reporting and Logging / What to Log. Context: superuser. Description: Log the use of temporary files larger than this number of kilobytes. Zero logs all files. The default is -1 (turning this feature off)."
+    },
+    {
+        "name": "log_timezone",
+        "prefix": "log",
+        "full_description": "Category: Reporting and Logging / What to Log. Context: sighup. Description: Sets the time zone to use in log messages."
+    },
+    {
+        "name": "log_transaction_sample_rate",
+        "prefix": "log",
+        "full_description": "Category: Reporting and Logging / When to Log. Context: superuser. Description: Sets the fraction of transactions from which to log all statements. Use a value between 0.0 (never log) and 1.0 (log all statements for all transactions)."
+    },
+    {
+        "name": "log_truncate_on_rotation",
+        "prefix": "log",
+        "full_description": "Category: Reporting and Logging / Where to Log. Context: sighup. Description: Truncate existing log files of same name during log rotation."
+    },
+    {
+        "name": "logging_collector",
+        "prefix": "logging",
+        "full_description": "Category: Reporting and Logging / Where to Log. Context: postmaster. Description: Start a subprocess to capture stderr, csvlog and/or jsonlog into log files."
+    },
+    {
+        "name": "logical_decoding_work_mem",
+        "prefix": "logical",
+        "full_description": "Category: Resource Usage / Memory. Context: user. Description: Sets the maximum memory to be used for logical decoding. This much memory can be used by each internal reorder buffer before spilling to disk."
+    },
+    {
+        "name": "maintenance_io_concurrency",
+        "prefix": "maintenance",
+        "full_description": "Category: Resource Usage / Asynchronous Behavior. Context: user. Description: A variant of effective_io_concurrency that is used for maintenance work."
+    },
+    {
+        "name": "maintenance_work_mem",
+        "prefix": "maintenance",
+        "full_description": "Category: Resource Usage / Memory. Context: user. Description: Sets the maximum memory to be used for maintenance operations. This includes operations such as VACUUM and CREATE INDEX."
+    },
+    {
+        "name": "max_connections",
+        "prefix": "max",
+        "full_description": "Category: Connections and Authentication / Connection Settings. Context: postmaster. Description: Sets the maximum number of concurrent connections."
+    },
+    {
+        "name": "max_files_per_process",
+        "prefix": "max",
+        "full_description": "Category: Resource Usage / Kernel Resources. Context: postmaster. Description: Sets the maximum number of simultaneously open files for each server process."
+    },
+    {
+        "name": "max_function_args",
+        "prefix": "max",
+        "full_description": "Category: Preset Options. Context: internal. Description: Shows the maximum number of function arguments."
+    },
+    {
+        "name": "max_identifier_length",
+        "prefix": "max",
+        "full_description": "Category: Preset Options. Context: internal. Description: Shows the maximum identifier length."
+    },
+    {
+        "name": "max_index_keys",
+        "prefix": "max",
+        "full_description": "Category: Preset Options. Context: internal. Description: Shows the maximum number of index keys."
+    },
+    {
+        "name": "max_locks_per_transaction",
+        "prefix": "max",
+        "full_description": "Category: Lock Management. Context: postmaster. Description: Sets the maximum number of locks per transaction. The shared lock table is sized on the assumption that at most max_locks_per_transaction * max_connections distinct objects will need to be locked at any one time."
+    },
+    {
+        "name": "max_logical_replication_workers",
+        "prefix": "max",
+        "full_description": "Category: Replication / Subscribers. Context: postmaster. Description: Maximum number of logical replication worker processes."
+    },
+    {
+        "name": "max_parallel_maintenance_workers",
+        "prefix": "max",
+        "full_description": "Category: Resource Usage / Asynchronous Behavior. Context: user. Description: Sets the maximum number of parallel processes per maintenance operation."
+    },
+    {
+        "name": "max_parallel_workers",
+        "prefix": "max",
+        "full_description": "Category: Resource Usage / Asynchronous Behavior. Context: user. Description: Sets the maximum number of parallel workers that can be active at one time."
+    },
+    {
+        "name": "max_parallel_workers_per_gather",
+        "prefix": "max",
+        "full_description": "Category: Resource Usage / Asynchronous Behavior. Context: user. Description: Sets the maximum number of parallel processes per executor node."
+    },
+    {
+        "name": "max_pred_locks_per_page",
+        "prefix": "max",
+        "full_description": "Category: Lock Management. Context: sighup. Description: Sets the maximum number of predicate-locked tuples per page. If more than this number of tuples on the same page are locked by a connection, those locks are replaced by a page-level lock."
+    },
+    {
+        "name": "max_pred_locks_per_relation",
+        "prefix": "max",
+        "full_description": "Category: Lock Management. Context: sighup. Description: Sets the maximum number of predicate-locked pages and tuples per relation. If more than this total of pages and tuples in the same relation are locked by a connection, those locks are replaced by a relation-level lock."
+    },
+    {
+        "name": "max_pred_locks_per_transaction",
+        "prefix": "max",
+        "full_description": "Category: Lock Management. Context: postmaster. Description: Sets the maximum number of predicate locks per transaction. The shared predicate lock table is sized on the assumption that at most max_pred_locks_per_transaction * max_connections distinct objects will need to be locked at any one time."
+    },
+    {
+        "name": "max_prepared_transactions",
+        "prefix": "max",
+        "full_description": "Category: Resource Usage / Memory. Context: postmaster. Description: Sets the maximum number of simultaneously prepared transactions."
+    },
+    {
+        "name": "max_replication_slots",
+        "prefix": "max",
+        "full_description": "Category: Replication / Sending Servers. Context: postmaster. Description: Sets the maximum number of simultaneously defined replication slots."
+    },
+    {
+        "name": "max_slot_wal_keep_size",
+        "prefix": "max",
+        "full_description": "Category: Replication / Sending Servers. Context: sighup. Description: Sets the maximum WAL size that can be reserved by replication slots. Replication slots will be marked as failed, and segments released for deletion or recycling, if this much space is occupied by WAL on disk."
+    },
+    {
+        "name": "max_stack_depth",
+        "prefix": "max",
+        "full_description": "Category: Resource Usage / Memory. Context: superuser. Description: Sets the maximum stack depth, in kilobytes."
+    },
+    {
+        "name": "max_standby_archive_delay",
+        "prefix": "max",
+        "full_description": "Category: Replication / Standby Servers. Context: sighup. Description: Sets the maximum delay before canceling queries when a hot standby server is processing archived WAL data."
+    },
+    {
+        "name": "max_standby_streaming_delay",
+        "prefix": "max",
+        "full_description": "Category: Replication / Standby Servers. Context: sighup. Description: Sets the maximum delay before canceling queries when a hot standby server is processing streamed WAL data."
+    },
+    {
+        "name": "max_sync_workers_per_subscription",
+        "prefix": "max",
+        "full_description": "Category: Replication / Subscribers. Context: sighup. Description: Maximum number of table synchronization workers per subscription."
+    },
+    {
+        "name": "max_wal_senders",
+        "prefix": "max",
+        "full_description": "Category: Replication / Sending Servers. Context: postmaster. Description: Sets the maximum number of simultaneously running WAL sender processes."
+    },
+    {
+        "name": "max_wal_size",
+        "prefix": "max",
+        "full_description": "Category: Write-Ahead Log / Checkpoints. Context: sighup. Description: Sets the WAL size that triggers a checkpoint."
+    },
+    {
+        "name": "max_worker_processes",
+        "prefix": "max",
+        "full_description": "Category: Resource Usage / Asynchronous Behavior. Context: postmaster. Description: Maximum number of concurrent worker processes."
+    },
+    {
+        "name": "min_dynamic_shared_memory",
+        "prefix": "min",
+        "full_description": "Category: Resource Usage / Memory. Context: postmaster. Description: Amount of dynamic shared memory reserved at startup."
+    },
+    {
+        "name": "min_parallel_index_scan_size",
+        "prefix": "min",
+        "full_description": "Category: Query Tuning / Planner Cost Constants. Context: user. Description: Sets the minimum amount of index data for a parallel scan. If the planner estimates that it will read a number of index pages too small to reach this limit, a parallel scan will not be considered."
+    },
+    {
+        "name": "min_parallel_table_scan_size",
+        "prefix": "min",
+        "full_description": "Category: Query Tuning / Planner Cost Constants. Context: user. Description: Sets the minimum amount of table data for a parallel scan. If the planner estimates that it will read a number of table pages too small to reach this limit, a parallel scan will not be considered."
+    },
+    {
+        "name": "min_wal_size",
+        "prefix": "min",
+        "full_description": "Category: Write-Ahead Log / Checkpoints. Context: sighup. Description: Sets the minimum size to shrink the WAL to."
+    },
+    {
+        "name": "old_snapshot_threshold",
+        "prefix": "old",
+        "full_description": "Category: Resource Usage / Asynchronous Behavior. Context: postmaster. Description: Time before a snapshot is too old to read pages changed after the snapshot was taken. A value of -1 disables this feature."
+    },
+    {
+        "name": "parallel_leader_participation",
+        "prefix": "parallel",
+        "full_description": "Category: Resource Usage / Asynchronous Behavior. Context: user. Description: Controls whether Gather and Gather Merge also run subplans. Should gather nodes also run subplans or just gather tuples?"
+    },
+    {
+        "name": "parallel_setup_cost",
+        "prefix": "parallel",
+        "full_description": "Category: Query Tuning / Planner Cost Constants. Context: user. Description: Sets the planner's estimate of the cost of starting up worker processes for parallel query."
+    },
+    {
+        "name": "parallel_tuple_cost",
+        "prefix": "parallel",
+        "full_description": "Category: Query Tuning / Planner Cost Constants. Context: user. Description: Sets the planner's estimate of the cost of passing each tuple (row) from worker to leader backend."
+    },
+    {
+        "name": "password_encryption",
+        "prefix": "password",
+        "full_description": "Category: Connections and Authentication / Authentication. Context: user. Description: Chooses the algorithm for encrypting passwords."
+    },
+    {
+        "name": "plan_cache_mode",
+        "prefix": "plan",
+        "full_description": "Category: Query Tuning / Other Planner Options. Context: user. Description: Controls the planner's selection of custom or generic plan. Prepared statements can have custom and generic plans, and the planner will attempt to choose which is better. This can be set to override the default behavior."
+    },
+    {
+        "name": "port",
+        "prefix": "general",
+        "full_description": "Category: Connections and Authentication / Connection Settings. Context: postmaster. Description: Sets the TCP port the server listens on."
+    },
+    {
+        "name": "post_auth_delay",
+        "prefix": "post",
+        "full_description": "Category: Developer Options. Context: backend. Description: Waits N seconds on connection startup after authentication. This allows attaching a debugger to the process."
+    },
+    {
+        "name": "pre_auth_delay",
+        "prefix": "pre",
+        "full_description": "Category: Developer Options. Context: sighup. Description: Waits N seconds on connection startup before authentication. This allows attaching a debugger to the process."
+    },
+    {
+        "name": "primary_conninfo",
+        "prefix": "primary",
+        "full_description": "Category: Replication / Standby Servers. Context: sighup. Description: Sets the connection string to be used to connect to the sending server."
+    },
+    {
+        "name": "primary_slot_name",
+        "prefix": "primary",
+        "full_description": "Category: Replication / Standby Servers. Context: sighup. Description: Sets the name of the replication slot to use on the sending server."
+    },
+    {
+        "name": "promote_trigger_file",
+        "prefix": "promote",
+        "full_description": "Category: Replication / Standby Servers. Context: sighup. Description: Specifies a file name whose presence ends recovery in the standby."
+    },
+    {
+        "name": "quote_all_identifiers",
+        "prefix": "quote",
+        "full_description": "Category: Version and Platform Compatibility / Previous PostgreSQL Versions. Context: user. Description: When generating SQL fragments, quote all identifiers."
+    },
+    {
+        "name": "random_page_cost",
+        "prefix": "random",
+        "full_description": "Category: Query Tuning / Planner Cost Constants. Context: user. Description: Sets the planner's estimate of the cost of a nonsequentially fetched disk page."
+    },
+    {
+        "name": "recovery_end_command",
+        "prefix": "recovery",
+        "full_description": "Category: Write-Ahead Log / Archive Recovery. Context: sighup. Description: Sets the shell command that will be executed once at the end of recovery."
+    },
+    {
+        "name": "recovery_init_sync_method",
+        "prefix": "recovery",
+        "full_description": "Category: Error Handling. Context: sighup. Description: Sets the method for synchronizing the data directory before crash recovery."
+    },
+    {
+        "name": "recovery_min_apply_delay",
+        "prefix": "recovery",
+        "full_description": "Category: Replication / Standby Servers. Context: sighup. Description: Sets the minimum delay for applying changes during recovery."
+    },
+    {
+        "name": "recovery_target",
+        "prefix": "recovery",
+        "full_description": "Category: Write-Ahead Log / Recovery Target. Context: postmaster. Description: Set to \"immediate\" to end recovery as soon as a consistent state is reached."
+    },
+    {
+        "name": "recovery_target_action",
+        "prefix": "recovery",
+        "full_description": "Category: Write-Ahead Log / Recovery Target. Context: postmaster. Description: Sets the action to perform upon reaching the recovery target."
+    },
+    {
+        "name": "recovery_target_inclusive",
+        "prefix": "recovery",
+        "full_description": "Category: Write-Ahead Log / Recovery Target. Context: postmaster. Description: Sets whether to include or exclude transaction with recovery target."
+    },
+    {
+        "name": "recovery_target_lsn",
+        "prefix": "recovery",
+        "full_description": "Category: Write-Ahead Log / Recovery Target. Context: postmaster. Description: Sets the LSN of the write-ahead log location up to which recovery will proceed."
+    },
+    {
+        "name": "recovery_target_name",
+        "prefix": "recovery",
+        "full_description": "Category: Write-Ahead Log / Recovery Target. Context: postmaster. Description: Sets the named restore point up to which recovery will proceed."
+    },
+    {
+        "name": "recovery_target_time",
+        "prefix": "recovery",
+        "full_description": "Category: Write-Ahead Log / Recovery Target. Context: postmaster. Description: Sets the time stamp up to which recovery will proceed."
+    },
+    {
+        "name": "recovery_target_timeline",
+        "prefix": "recovery",
+        "full_description": "Category: Write-Ahead Log / Recovery Target. Context: postmaster. Description: Specifies the timeline to recover into."
+    },
+    {
+        "name": "recovery_target_xid",
+        "prefix": "recovery",
+        "full_description": "Category: Write-Ahead Log / Recovery Target. Context: postmaster. Description: Sets the transaction ID up to which recovery will proceed."
+    },
+    {
+        "name": "remove_temp_files_after_crash",
+        "prefix": "remove",
+        "full_description": "Category: Developer Options. Context: sighup. Description: Remove temporary files after backend crash."
+    },
+    {
+        "name": "restart_after_crash",
+        "prefix": "restart",
+        "full_description": "Category: Error Handling. Context: sighup. Description: Reinitialize server after backend crash."
+    },
+    {
+        "name": "restore_command",
+        "prefix": "restore",
+        "full_description": "Category: Write-Ahead Log / Archive Recovery. Context: sighup. Description: Sets the shell command that will be called to retrieve an archived WAL file."
+    },
+    {
+        "name": "restrict_nonsystem_relation_kind",
+        "prefix": "restrict",
+        "full_description": "Category: Client Connection Defaults / Statement Behavior. Context: user. Description: Prohibits access to non-system relations of specified kinds."
+    },
+    {
+        "name": "row_security",
+        "prefix": "row",
+        "full_description": "Category: Client Connection Defaults / Statement Behavior. Context: user. Description: Enable row security. When enabled, row security will be applied to all users."
+    },
+    {
+        "name": "search_path",
+        "prefix": "search",
+        "full_description": "Category: Client Connection Defaults / Statement Behavior. Context: user. Description: Sets the schema search order for names that are not schema-qualified."
+    },
+    {
+        "name": "segment_size",
+        "prefix": "segment",
+        "full_description": "Category: Preset Options. Context: internal. Description: Shows the number of pages per disk file."
+    },
+    {
+        "name": "seq_page_cost",
+        "prefix": "seq",
+        "full_description": "Category: Query Tuning / Planner Cost Constants. Context: user. Description: Sets the planner's estimate of the cost of a sequentially fetched disk page."
+    },
+    {
+        "name": "server_encoding",
+        "prefix": "server",
+        "full_description": "Category: Preset Options. Context: internal. Description: Shows the server (database) character set encoding."
+    },
+    {
+        "name": "server_version",
+        "prefix": "server",
+        "full_description": "Category: Preset Options. Context: internal. Description: Shows the server version."
+    },
+    {
+        "name": "server_version_num",
+        "prefix": "server",
+        "full_description": "Category: Preset Options. Context: internal. Description: Shows the server version as an integer."
+    },
+    {
+        "name": "session_preload_libraries",
+        "prefix": "session",
+        "full_description": "Category: Client Connection Defaults / Shared Library Preloading. Context: superuser. Description: Lists shared libraries to preload into each backend."
+    },
+    {
+        "name": "session_replication_role",
+        "prefix": "session",
+        "full_description": "Category: Client Connection Defaults / Statement Behavior. Context: superuser. Description: Sets the session's behavior for triggers and rewrite rules."
+    },
+    {
+        "name": "shared_buffers",
+        "prefix": "shared",
+        "full_description": "Category: Resource Usage / Memory. Context: postmaster. Description: Sets the number of shared memory buffers used by the server."
+    },
+    {
+        "name": "shared_memory_type",
+        "prefix": "shared",
+        "full_description": "Category: Resource Usage / Memory. Context: postmaster. Description: Selects the shared memory implementation used for the main shared memory region."
+    },
+    {
+        "name": "shared_preload_libraries",
+        "prefix": "shared",
+        "full_description": "Category: Client Connection Defaults / Shared Library Preloading. Context: postmaster. Description: Lists shared libraries to preload into server."
+    },
+    {
+        "name": "ssl",
+        "prefix": "general",
+        "full_description": "Category: Connections and Authentication / SSL. Context: sighup. Description: Enables SSL connections."
+    },
+    {
+        "name": "ssl_ca_file",
+        "prefix": "ssl",
+        "full_description": "Category: Connections and Authentication / SSL. Context: sighup. Description: Location of the SSL certificate authority file."
+    },
+    {
+        "name": "ssl_cert_file",
+        "prefix": "ssl",
+        "full_description": "Category: Connections and Authentication / SSL. Context: sighup. Description: Location of the SSL server certificate file."
+    },
+    {
+        "name": "ssl_ciphers",
+        "prefix": "ssl",
+        "full_description": "Category: Connections and Authentication / SSL. Context: sighup. Description: Sets the list of allowed SSL ciphers."
+    },
+    {
+        "name": "ssl_crl_dir",
+        "prefix": "ssl",
+        "full_description": "Category: Connections and Authentication / SSL. Context: sighup. Description: Location of the SSL certificate revocation list directory."
+    },
+    {
+        "name": "ssl_crl_file",
+        "prefix": "ssl",
+        "full_description": "Category: Connections and Authentication / SSL. Context: sighup. Description: Location of the SSL certificate revocation list file."
+    },
+    {
+        "name": "ssl_dh_params_file",
+        "prefix": "ssl",
+        "full_description": "Category: Connections and Authentication / SSL. Context: sighup. Description: Location of the SSL DH parameters file."
+    },
+    {
+        "name": "ssl_ecdh_curve",
+        "prefix": "ssl",
+        "full_description": "Category: Connections and Authentication / SSL. Context: sighup. Description: Sets the curve to use for ECDH."
+    },
+    {
+        "name": "ssl_key_file",
+        "prefix": "ssl",
+        "full_description": "Category: Connections and Authentication / SSL. Context: sighup. Description: Location of the SSL server private key file."
+    },
+    {
+        "name": "ssl_library",
+        "prefix": "ssl",
+        "full_description": "Category: Preset Options. Context: internal. Description: Shows the name of the SSL library."
+    },
+    {
+        "name": "ssl_max_protocol_version",
+        "prefix": "ssl",
+        "full_description": "Category: Connections and Authentication / SSL. Context: sighup. Description: Sets the maximum SSL/TLS protocol version to use."
+    },
+    {
+        "name": "ssl_min_protocol_version",
+        "prefix": "ssl",
+        "full_description": "Category: Connections and Authentication / SSL. Context: sighup. Description: Sets the minimum SSL/TLS protocol version to use."
+    },
+    {
+        "name": "ssl_passphrase_command",
+        "prefix": "ssl",
+        "full_description": "Category: Connections and Authentication / SSL. Context: sighup. Description: Command to obtain passphrases for SSL."
+    },
+    {
+        "name": "ssl_passphrase_command_supports_reload",
+        "prefix": "ssl",
+        "full_description": "Category: Connections and Authentication / SSL. Context: sighup. Description: Also use ssl_passphrase_command during server reload."
+    },
+    {
+        "name": "ssl_prefer_server_ciphers",
+        "prefix": "ssl",
+        "full_description": "Category: Connections and Authentication / SSL. Context: sighup. Description: Give priority to server ciphersuite order."
+    },
+    {
+        "name": "standard_conforming_strings",
+        "prefix": "standard",
+        "full_description": "Category: Version and Platform Compatibility / Previous PostgreSQL Versions. Context: user. Description: Causes '...' strings to treat backslashes literally."
+    },
+    {
+        "name": "statement_timeout",
+        "prefix": "statement",
+        "full_description": "Category: Client Connection Defaults / Statement Behavior. Context: user. Description: Sets the maximum allowed duration of any statement. A value of 0 turns off the timeout."
+    },
+    {
+        "name": "stats_temp_directory",
+        "prefix": "stats",
+        "full_description": "Category: Statistics / Query and Index Statistics Collector. Context: sighup. Description: Writes temporary statistics files to the specified directory."
+    },
+    {
+        "name": "superuser_reserved_connections",
+        "prefix": "superuser",
+        "full_description": "Category: Connections and Authentication / Connection Settings. Context: postmaster. Description: Sets the number of connection slots reserved for superusers."
+    },
+    {
+        "name": "synchronize_seqscans",
+        "prefix": "synchronize",
+        "full_description": "Category: Version and Platform Compatibility / Previous PostgreSQL Versions. Context: user. Description: Enable synchronized sequential scans."
+    },
+    {
+        "name": "synchronous_commit",
+        "prefix": "synchronous",
+        "full_description": "Category: Write-Ahead Log / Settings. Context: user. Description: Sets the current transaction's synchronization level."
+    },
+    {
+        "name": "synchronous_standby_names",
+        "prefix": "synchronous",
+        "full_description": "Category: Replication / Primary Server. Context: sighup. Description: Number of synchronous standbys and list of names of potential synchronous ones."
+    },
+    {
+        "name": "syslog_facility",
+        "prefix": "syslog",
+        "full_description": "Category: Reporting and Logging / Where to Log. Context: sighup. Description: Sets the syslog \"facility\" to be used when syslog enabled."
+    },
+    {
+        "name": "syslog_ident",
+        "prefix": "syslog",
+        "full_description": "Category: Reporting and Logging / Where to Log. Context: sighup. Description: Sets the program name used to identify PostgreSQL messages in syslog."
+    },
+    {
+        "name": "syslog_sequence_numbers",
+        "prefix": "syslog",
+        "full_description": "Category: Reporting and Logging / Where to Log. Context: sighup. Description: Add sequence number to syslog messages to avoid duplicate suppression."
+    },
+    {
+        "name": "syslog_split_messages",
+        "prefix": "syslog",
+        "full_description": "Category: Reporting and Logging / Where to Log. Context: sighup. Description: Split messages sent to syslog by lines and to fit into 1024 bytes."
+    },
+    {
+        "name": "tcp_keepalives_count",
+        "prefix": "tcp",
+        "full_description": "Category: Connections and Authentication / Connection Settings. Context: user. Description: Maximum number of TCP keepalive retransmits. This controls the number of consecutive keepalive retransmits that can be lost before a connection is considered dead. A value of 0 uses the system default."
+    },
+    {
+        "name": "tcp_keepalives_idle",
+        "prefix": "tcp",
+        "full_description": "Category: Connections and Authentication / Connection Settings. Context: user. Description: Time between issuing TCP keepalives. A value of 0 uses the system default."
+    },
+    {
+        "name": "tcp_keepalives_interval",
+        "prefix": "tcp",
+        "full_description": "Category: Connections and Authentication / Connection Settings. Context: user. Description: Time between TCP keepalive retransmits. A value of 0 uses the system default."
+    },
+    {
+        "name": "tcp_user_timeout",
+        "prefix": "tcp",
+        "full_description": "Category: Connections and Authentication / Connection Settings. Context: user. Description: TCP user timeout. A value of 0 uses the system default."
+    },
+    {
+        "name": "temp_buffers",
+        "prefix": "temp",
+        "full_description": "Category: Resource Usage / Memory. Context: user. Description: Sets the maximum number of temporary buffers used by each session."
+    },
+    {
+        "name": "temp_file_limit",
+        "prefix": "temp",
+        "full_description": "Category: Resource Usage / Disk. Context: superuser. Description: Limits the total size of all temporary files used by each process. -1 means no limit."
+    },
+    {
+        "name": "temp_tablespaces",
+        "prefix": "temp",
+        "full_description": "Category: Client Connection Defaults / Statement Behavior. Context: user. Description: Sets the tablespace(s) to use for temporary tables and sort files."
+    },
+    {
+        "name": "timezone_abbreviations",
+        "prefix": "timezone",
+        "full_description": "Category: Client Connection Defaults / Locale and Formatting. Context: user. Description: Selects a file of time zone abbreviations."
+    },
+    {
+        "name": "trace_notify",
+        "prefix": "trace",
+        "full_description": "Category: Developer Options. Context: user. Description: Generates debugging output for LISTEN and NOTIFY."
+    },
+    {
+        "name": "trace_recovery_messages",
+        "prefix": "trace",
+        "full_description": "Category: Developer Options. Context: sighup. Description: Enables logging of recovery-related debugging information. Each level includes all the levels that follow it. The later the level, the fewer messages are sent."
+    },
+    {
+        "name": "trace_sort",
+        "prefix": "trace",
+        "full_description": "Category: Developer Options. Context: user. Description: Emit information about resource usage in sorting."
+    },
+    {
+        "name": "track_activities",
+        "prefix": "track",
+        "full_description": "Category: Statistics / Query and Index Statistics Collector. Context: superuser. Description: Collects information about executing commands. Enables the collection of information on the currently executing command of each session, along with the time at which that command began execution."
+    },
+    {
+        "name": "track_activity_query_size",
+        "prefix": "track",
+        "full_description": "Category: Statistics / Query and Index Statistics Collector. Context: postmaster. Description: Sets the size reserved for pg_stat_activity.query, in bytes."
+    },
+    {
+        "name": "track_commit_timestamp",
+        "prefix": "track",
+        "full_description": "Category: Replication / Sending Servers. Context: postmaster. Description: Collects transaction commit time."
+    },
+    {
+        "name": "track_counts",
+        "prefix": "track",
+        "full_description": "Category: Statistics / Query and Index Statistics Collector. Context: superuser. Description: Collects statistics on database activity."
+    },
+    {
+        "name": "track_functions",
+        "prefix": "track",
+        "full_description": "Category: Statistics / Query and Index Statistics Collector. Context: superuser. Description: Collects function-level statistics on database activity."
+    },
+    {
+        "name": "track_io_timing",
+        "prefix": "track",
+        "full_description": "Category: Statistics / Query and Index Statistics Collector. Context: superuser. Description: Collects timing statistics for database I/O activity."
+    },
+    {
+        "name": "track_wal_io_timing",
+        "prefix": "track",
+        "full_description": "Category: Statistics / Query and Index Statistics Collector. Context: superuser. Description: Collects timing statistics for WAL I/O activity."
+    },
+    {
+        "name": "transaction_deferrable",
+        "prefix": "transaction",
+        "full_description": "Category: Client Connection Defaults / Statement Behavior. Context: user. Description: Whether to defer a read-only serializable transaction until it can be executed with no possible serialization failures."
+    },
+    {
+        "name": "transaction_isolation",
+        "prefix": "transaction",
+        "full_description": "Category: Client Connection Defaults / Statement Behavior. Context: user. Description: Sets the current transaction's isolation level."
+    },
+    {
+        "name": "transaction_read_only",
+        "prefix": "transaction",
+        "full_description": "Category: Client Connection Defaults / Statement Behavior. Context: user. Description: Sets the current transaction's read-only status."
+    },
+    {
+        "name": "transform_null_equals",
+        "prefix": "transform",
+        "full_description": "Category: Version and Platform Compatibility / Other Platforms and Clients. Context: user. Description: Treats \"expr=NULL\" as \"expr IS NULL\". When turned on, expressions of the form expr = NULL (or NULL = expr) are treated as expr IS NULL, that is, they return true if expr evaluates to the null value, and false otherwise. The correct behavior of expr = NULL is to always return null (unknown)."
+    },
+    {
+        "name": "unix_socket_directories",
+        "prefix": "unix",
+        "full_description": "Category: Connections and Authentication / Connection Settings. Context: postmaster. Description: Sets the directories where Unix-domain sockets will be created."
+    },
+    {
+        "name": "unix_socket_group",
+        "prefix": "unix",
+        "full_description": "Category: Connections and Authentication / Connection Settings. Context: postmaster. Description: Sets the owning group of the Unix-domain socket. The owning user of the socket is always the user that starts the server."
+    },
+    {
+        "name": "unix_socket_permissions",
+        "prefix": "unix",
+        "full_description": "Category: Connections and Authentication / Connection Settings. Context: postmaster. Description: Sets the access permissions of the Unix-domain socket. Unix-domain sockets use the usual Unix file system permission set. The parameter value is expected to be a numeric mode specification in the form accepted by the chmod and umask system calls. (To use the customary octal format the number must start with a 0 (zero).)"
+    },
+    {
+        "name": "update_process_title",
+        "prefix": "update",
+        "full_description": "Category: Reporting and Logging / Process Title. Context: superuser. Description: Updates the process title to show the active SQL command. Enables updating of the process title every time a new SQL command is received by the server."
+    },
+    {
+        "name": "vacuum_cost_delay",
+        "prefix": "vacuum",
+        "full_description": "Category: Resource Usage / Cost-Based Vacuum Delay. Context: user. Description: Vacuum cost delay in milliseconds."
+    },
+    {
+        "name": "vacuum_cost_limit",
+        "prefix": "vacuum",
+        "full_description": "Category: Resource Usage / Cost-Based Vacuum Delay. Context: user. Description: Vacuum cost amount available before napping."
+    },
+    {
+        "name": "vacuum_cost_page_dirty",
+        "prefix": "vacuum",
+        "full_description": "Category: Resource Usage / Cost-Based Vacuum Delay. Context: user. Description: Vacuum cost for a page dirtied by vacuum."
+    },
+    {
+        "name": "vacuum_cost_page_hit",
+        "prefix": "vacuum",
+        "full_description": "Category: Resource Usage / Cost-Based Vacuum Delay. Context: user. Description: Vacuum cost for a page found in the buffer cache."
+    },
+    {
+        "name": "vacuum_cost_page_miss",
+        "prefix": "vacuum",
+        "full_description": "Category: Resource Usage / Cost-Based Vacuum Delay. Context: user. Description: Vacuum cost for a page not found in the buffer cache."
+    },
+    {
+        "name": "vacuum_defer_cleanup_age",
+        "prefix": "vacuum",
+        "full_description": "Category: Replication / Primary Server. Context: sighup. Description: Number of transactions by which VACUUM and HOT cleanup should be deferred, if any."
+    },
+    {
+        "name": "vacuum_failsafe_age",
+        "prefix": "vacuum",
+        "full_description": "Category: Client Connection Defaults / Statement Behavior. Context: user. Description: Age at which VACUUM should trigger failsafe to avoid a wraparound outage."
+    },
+    {
+        "name": "vacuum_freeze_min_age",
+        "prefix": "vacuum",
+        "full_description": "Category: Client Connection Defaults / Statement Behavior. Context: user. Description: Minimum age at which VACUUM should freeze a table row."
+    },
+    {
+        "name": "vacuum_freeze_table_age",
+        "prefix": "vacuum",
+        "full_description": "Category: Client Connection Defaults / Statement Behavior. Context: user. Description: Age at which VACUUM should scan whole table to freeze tuples."
+    },
+    {
+        "name": "vacuum_multixact_failsafe_age",
+        "prefix": "vacuum",
+        "full_description": "Category: Client Connection Defaults / Statement Behavior. Context: user. Description: Multixact age at which VACUUM should trigger failsafe to avoid a wraparound outage."
+    },
+    {
+        "name": "vacuum_multixact_freeze_min_age",
+        "prefix": "vacuum",
+        "full_description": "Category: Client Connection Defaults / Statement Behavior. Context: user. Description: Minimum age at which VACUUM should freeze a MultiXactId in a table row."
+    },
+    {
+        "name": "vacuum_multixact_freeze_table_age",
+        "prefix": "vacuum",
+        "full_description": "Category: Client Connection Defaults / Statement Behavior. Context: user. Description: Multixact age at which VACUUM should scan whole table to freeze tuples."
+    },
+    {
+        "name": "wal_block_size",
+        "prefix": "wal",
+        "full_description": "Category: Preset Options. Context: internal. Description: Shows the block size in the write ahead log."
+    },
+    {
+        "name": "wal_buffers",
+        "prefix": "wal",
+        "full_description": "Category: Write-Ahead Log / Settings. Context: postmaster. Description: Sets the number of disk-page buffers in shared memory for WAL."
+    },
+    {
+        "name": "wal_compression",
+        "prefix": "wal",
+        "full_description": "Category: Write-Ahead Log / Settings. Context: superuser. Description: Compresses full-page writes written in WAL file."
+    },
+    {
+        "name": "wal_consistency_checking",
+        "prefix": "wal",
+        "full_description": "Category: Developer Options. Context: superuser. Description: Sets the WAL resource managers for which WAL consistency checks are done. Full-page images will be logged for all data blocks and cross-checked against the results of WAL replay."
+    },
+    {
+        "name": "wal_init_zero",
+        "prefix": "wal",
+        "full_description": "Category: Write-Ahead Log / Settings. Context: superuser. Description: Writes zeroes to new WAL files before first use."
+    },
+    {
+        "name": "wal_keep_size",
+        "prefix": "wal",
+        "full_description": "Category: Replication / Sending Servers. Context: sighup. Description: Sets the size of WAL files held for standby servers."
+    },
+    {
+        "name": "wal_level",
+        "prefix": "wal",
+        "full_description": "Category: Write-Ahead Log / Settings. Context: postmaster. Description: Sets the level of information written to the WAL."
+    },
+    {
+        "name": "wal_log_hints",
+        "prefix": "wal",
+        "full_description": "Category: Write-Ahead Log / Settings. Context: postmaster. Description: Writes full pages to WAL when first modified after a checkpoint, even for a non-critical modification."
+    },
+    {
+        "name": "wal_receiver_create_temp_slot",
+        "prefix": "wal",
+        "full_description": "Category: Replication / Standby Servers. Context: sighup. Description: Sets whether a WAL receiver should create a temporary replication slot if no permanent slot is configured."
+    },
+    {
+        "name": "wal_receiver_status_interval",
+        "prefix": "wal",
+        "full_description": "Category: Replication / Standby Servers. Context: sighup. Description: Sets the maximum interval between WAL receiver status reports to the sending server."
+    },
+    {
+        "name": "wal_receiver_timeout",
+        "prefix": "wal",
+        "full_description": "Category: Replication / Standby Servers. Context: sighup. Description: Sets the maximum wait time to receive data from the sending server."
+    },
+    {
+        "name": "wal_recycle",
+        "prefix": "wal",
+        "full_description": "Category: Write-Ahead Log / Settings. Context: superuser. Description: Recycles WAL files by renaming them."
+    },
+    {
+        "name": "wal_retrieve_retry_interval",
+        "prefix": "wal",
+        "full_description": "Category: Replication / Standby Servers. Context: sighup. Description: Sets the time to wait before retrying to retrieve WAL after a failed attempt."
+    },
+    {
+        "name": "wal_segment_size",
+        "prefix": "wal",
+        "full_description": "Category: Preset Options. Context: internal. Description: Shows the size of write ahead log segments."
+    },
+    {
+        "name": "wal_sender_timeout",
+        "prefix": "wal",
+        "full_description": "Category: Replication / Sending Servers. Context: user. Description: Sets the maximum time to wait for WAL replication."
+    },
+    {
+        "name": "wal_skip_threshold",
+        "prefix": "wal",
+        "full_description": "Category: Write-Ahead Log / Settings. Context: user. Description: Minimum size of new file to fsync instead of writing WAL."
+    },
+    {
+        "name": "wal_sync_method",
+        "prefix": "wal",
+        "full_description": "Category: Write-Ahead Log / Settings. Context: sighup. Description: Selects the method used for forcing WAL updates to disk."
+    },
+    {
+        "name": "wal_writer_delay",
+        "prefix": "wal",
+        "full_description": "Category: Write-Ahead Log / Settings. Context: sighup. Description: Time between WAL flushes performed in the WAL writer."
+    },
+    {
+        "name": "wal_writer_flush_after",
+        "prefix": "wal",
+        "full_description": "Category: Write-Ahead Log / Settings. Context: sighup. Description: Amount of WAL written out by WAL writer that triggers a flush."
+    },
+    {
+        "name": "work_mem",
+        "prefix": "work",
+        "full_description": "Category: Resource Usage / Memory. Context: user. Description: Sets the maximum memory to be used for query workspaces. This much memory can be used by each internal sort operation and hash table before switching to temporary disk files."
+    },
+    {
+        "name": "xmlbinary",
+        "prefix": "general",
+        "full_description": "Category: Client Connection Defaults / Statement Behavior. Context: user. Description: Sets how binary values are to be encoded in XML."
+    },
+    {
+        "name": "xmloption",
+        "prefix": "general",
+        "full_description": "Category: Client Connection Defaults / Statement Behavior. Context: user. Description: Sets whether XML data in implicit parsing and serialization operations is to be considered as documents or content fragments."
+    },
+    {
+        "name": "zero_damaged_pages",
+        "prefix": "zero",
+        "full_description": "Category: Developer Options. Context: superuser. Description: Continues processing past damaged page headers. Detection of a damaged page header normally causes PostgreSQL to report an error, aborting the current transaction. Setting zero_damaged_pages to true causes the system to instead report a warning, zero out the damaged page, and continue processing. This behavior will destroy data, namely all the rows on the damaged page."
+    }
+]
